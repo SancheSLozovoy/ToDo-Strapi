@@ -4,7 +4,7 @@
   "info": {
     "singularName": "task",
     "pluralName": "tasks",
-    "displayName": "Task",
+    "displayName": "Tasks",
     "description": ""
   },
   "options": {
@@ -20,8 +20,10 @@
       "type": "boolean"
     },
     "userId": {
-      "type": "uid",
-      "required": true
+      "type": "integer",
+      "required": true,
+      "unique": false,
+      "default": 87
     }
   }
 }

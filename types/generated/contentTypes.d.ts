@@ -5,7 +5,7 @@ export interface ApiTaskTask extends Struct.CollectionTypeSchema {
   info: {
     singularName: 'task';
     pluralName: 'tasks';
-    displayName: 'Task';
+    displayName: 'Tasks';
     description: '';
   };
   options: {
@@ -14,7 +14,9 @@ export interface ApiTaskTask extends Struct.CollectionTypeSchema {
   attributes: {
     title: Schema.Attribute.Text & Schema.Attribute.Required;
     completed: Schema.Attribute.Boolean;
-    userId: Schema.Attribute.UID & Schema.Attribute.Required;
+    userId: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<87>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
